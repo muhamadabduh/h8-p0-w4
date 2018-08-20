@@ -23,17 +23,18 @@ function checkAB(num) {
             jarakAB.push(Math.abs(posisiA[j]-posisiB[k]));
         }
     }
+
+    console.log(jarakAB)
    
     var check = false;
     var l = 0;
-    while(check == false){
-        if(jarakAB[l] >= 3){
+    while(check == false && l < jarakAB.length){
+        if(jarakAB[l] == 4){
             check = true;
         }
         l++;
     }
     return check;
-    
 }
 
 // TEST CASES
