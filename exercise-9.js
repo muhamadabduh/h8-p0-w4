@@ -11,16 +11,16 @@ function tukarBesarKecil(kalimat) {
     var newKalimat = '';
     for (var i = 0; i < kalimat.length; i++){
         
-        for(var j = 0; j < abjad.length && j<ABJAD.length; j++){
-            if(kalimat[i] === abjad[j]){
-                // console.log(kalimat[i], abjad[j]);
-                newKalimat += ABJAD[j];
-            } else if(kalimat[i] === ABJAD[j]){
-                newKalimat += abjad[j];
+        if(kalimat[i] === ' ' || kalimat[i] === '0' || kalimat[i] === '1' || kalimat[i] === '2' || kalimat[i] === '3' || kalimat[i] === '4' || kalimat[i] === '5' || kalimat[i] === '6' || kalimat[i] === '7' || kalimat[i] === '8' || kalimat[i] === '9'|| kalimat[i] === '-' || kalimat[i] === '_'){
+            newKalimat += kalimat[i];
+        } else {
+            for(var j = 0; j < abjad.length && j<ABJAD.length; j++){
+                if(kalimat[i] === abjad[j]){
+                    newKalimat += abjad[j].toUpperCase();
+                } else if(kalimat[i] === ABJAD[j]){
+                    newKalimat += ABJAD[j].toLowerCase();
+                }
             }
-        }
-        if(kalimat[i] === ' '){
-            newKalimat += ' ';
         }
     }
     
