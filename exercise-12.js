@@ -25,10 +25,6 @@ Code
 function shoppingTime(memberId, money) {
     var itemsPrice = [['Sepatu Stacattu', 1500000], ['Baju Zoro', 500000], ['Baju H&N', 250000], ['Sweater Uniklooh', 175000], ['Casing Handphone', 50000]];
     
-    var listItemsPrice = {};
-    for (var i = 0; i < itemsPrice.length; i++){
-        listItemsPrice[itemsPrice[i][0]] = itemsPrice[i][1]; 
-    }
 
     if(memberId == '' || memberId == undefined ){
         return 'Mohon maaf, toko X hanya berlaku untuk member saja';
