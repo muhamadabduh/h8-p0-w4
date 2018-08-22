@@ -14,15 +14,15 @@ function changeMe(arr) {
     for(var i = 0; i < arr.length;i++){
         var obj = {};
 
-            obj.firstName = arr[i][0];
-            obj.lastName = arr[i][1];
-            obj.gender = arr[i][2];
-            if( arr[i][3] >= 2018 || arr[i][3] == undefined){
-                obj.age = 'invalid birthday year';
-            } else {
-                obj.age = 2018 -arr[i][3];
-            };
-            result.push(obj);
+        obj.firstName = arr[i][0];
+        obj.lastName = arr[i][1];
+        obj.gender = arr[i][2];
+        if( arr[i][3] >= 2018 || arr[i][3] == undefined){
+            obj.age = 'invalid birthday year';
+        } else {
+            obj.age = 2018 -arr[i][3];
+        };
+        result.push(obj);
     }
     if(arr.length == 0){
         console.log('');
